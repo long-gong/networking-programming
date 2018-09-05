@@ -15,9 +15,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdarg.h>
 #include <unistd.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <sys/mman.h>
+#include <wait.h>
 
+void error(const char *fmt, ...);
+void fatal(const char *fmt, ...);
 
 #endif //NETWORKING_PROGRAMMING_COMMON_H
