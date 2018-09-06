@@ -32,3 +32,7 @@ target_link_libraries(${target_name} error_handler)
 set(target_name "fork_me")
 add_executable(${target_name} fork_me.c)
 target_link_libraries(${target_name} error_handler)
+
+set(target_name "fork_me_adv")
+add_executable(${target_name} fork_me_adv.c)
+target_link_libraries(${target_name} error_handler)

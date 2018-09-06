@@ -21,6 +21,7 @@
 #include <sys/types.h>
 #include <sys/mman.h>
 #include <wait.h>
+#include <setjmp.h>
 
 void error(const char *fmt, ...);
 void fatal(const char *fmt, ...);
