@@ -13,6 +13,9 @@ add_executable(${target_name} clean.c)
 set(target_name "error_handler")
 add_library(${target_name} STATIC error_handler.c)
 
+set(target_name "logging")
+add_library(${target_name} STATIC log.c)
+
 set(target_name "simple_cat")
 add_executable(${target_name} simple_cat.c)
 target_link_libraries(${target_name} error_handler)
@@ -36,3 +39,7 @@ target_link_libraries(${target_name} error_handler)
 set(target_name "fork_me_adv")
 add_executable(${target_name} fork_me_adv.c)
 target_link_libraries(${target_name} error_handler)
+
+set(target_name "daemonize")
+add_executable(${target_name} daemon.c)
+target_link_libraries(${target_name} logging error_handler)

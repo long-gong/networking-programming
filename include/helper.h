@@ -15,15 +15,22 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <stdarg.h>
 #include <unistd.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/mman.h>
 #include <wait.h>
 #include <setjmp.h>
+#include <sys/resource.h>
+#include <syslog.h>
+#include <stdarg.h>
+#include <grp.h>
+
 
 void error(const char *fmt, ...);
 void fatal(const char *fmt, ...);
+int initlog(const char *logfile);
+void log_(const char *fmt, ...);
+
 
 #endif //NETWORKING_PROGRAMMING_COMMON_H
